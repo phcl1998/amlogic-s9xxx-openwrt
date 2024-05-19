@@ -161,7 +161,7 @@ on:
         type: choice
         options:
           - 5.4.y
-          - 5.10.216
+          - 5.10.217
           - 5.15.y
           - 6.1.y
           - 6.6.y
@@ -203,7 +203,7 @@ on:
         default: "ophub"
         type: choice
         options:
-          - ophub
+          - s
           - angel
           - new
 
