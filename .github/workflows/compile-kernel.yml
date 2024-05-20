@@ -68,7 +68,7 @@ on:
         default: "-ophub"
         type: choice
         options:
-          - -ophub
+          - -s
           - -yourname
 
 env:
