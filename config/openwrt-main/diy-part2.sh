@@ -27,7 +27,7 @@ rm -rf package/luci-app-amlogic
 git clone https://github.com/ophub/luci-app-amlogic.git package/luci-app-amlogic
 
 # Add luci-theme-argon
-git clone https://github.com/jerrykuku/luci-theme-argon.git package/uci-theme-argon
+git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
 
 # Add nas-packages-luci
 git clone https://github.com/linkease/nas-packages-luci.git package/nas-packages-luci
