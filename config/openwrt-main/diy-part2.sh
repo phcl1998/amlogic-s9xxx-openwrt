@@ -26,9 +26,11 @@ echo "DISTRIB_SOURCECODE='official'" >>package/base-files/files/etc/openwrt_rele
 rm -rf package/luci-app-amlogic
 git clone https://github.com/ophub/luci-app-amlogic.git package/luci-app-amlogic
 
+# Add luci-theme-argon
+git clone https://github.com/jerrykuku/luci-theme-argon.git package/uci-theme-argon
 
-# Add luci-app-argon
-
+# Add nas-packages-luci
+git clone https://github.com/linkease/nas-packages-luci.git package/nas-packages-luci
 
 # Apply patch
 # git apply ../config/patches/{0001*,0002*}.patch --directory=feeds/luci
