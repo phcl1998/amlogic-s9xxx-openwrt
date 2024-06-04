@@ -30,8 +30,15 @@ git clone https://github.com/ophub/luci-app-amlogic.git package/luci-app-amlogic
 git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
 
 # Add nas-packages-luci
-git clone https://github.com/linkease/nas-packages.git;master' package/nas-packages
-git clone https://github.com/linkease/nas-packages-luci.git package/nas-packages-luci
+# git clone https://github.com/linkease/nas-packages.git;master' package/nas-packages
+# git clone https://github.com/linkease/nas-packages-luci.git package/nas-packages-luci
+echo >> feeds.conf.default
+echo 'src-git nas https://github.com/linkease/nas-packages.git;master' >> feeds.conf.default
+echo 'src-git nas_luci https://github.com/linkease/nas-packages-luci.git;main' >> feeds.conf.default
+./scripts/feeds update nas nas_luci
+./scripts/feeds install -a -p nas
+./scripts/feeds install -a -p nas_luci
+
 
 # Apply patch
 # git apply ../config/patches/{0001*,0002*}.patch --directory=feeds/luci
